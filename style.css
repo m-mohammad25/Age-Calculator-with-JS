@@ -1,0 +1,178 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 86%);
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 42rem;
+  background-color: white;
+  padding: 3.3rem;
+  border-radius: 1rem 1rem 8rem;
+}
+main header {
+  border-bottom: 1px solid hsl(0, 0%, 86%);
+  position: relative;
+  padding-bottom: 2.3rem;
+}
+main header form {
+  display: flex;
+  column-gap: 1.7rem;
+}
+main header div {
+  display: flex;
+  flex-direction: column;
+}
+main header div label {
+  color: hsl(0, 1%, 44%);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: smaller;
+}
+main header div input[type=number] {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  width: 8.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 8%);
+  outline: 0;
+}
+main header div input[type=number]:focus {
+  border-color: hsl(259, 100%, 65%);
+}
+main header div span.err {
+  padding: 0.4rem;
+  font-size: 0.9em;
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
+}
+main header button.submit {
+  background-color: hsl(259, 100%, 65%);
+  border: 0;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  padding: 1.3rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate(0, 50%);
+}
+main header button.submit img {
+  width: 100%;
+  height: auto;
+}
+main header button.submit:active {
+  background-color: hsl(0, 0%, 8%);
+}
+main header button.submit:hover {
+  cursor: pointer;
+}
+main section {
+  padding-top: 2rem;
+}
+main section h1 {
+  font-style: italic;
+  font-size: 5.4rem;
+  font-weight: bolder;
+  margin: 0;
+}
+main section h1 span {
+  color: hsl(259, 100%, 65%);
+}
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  padding: 0.8rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 800px) {
+  main {
+    width: 40rem;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    width: fit-content;
+    padding: 3.3rem 1.5rem;
+  }
+  main header {
+    padding-bottom: 4.3rem;
+  }
+  main header div input[type=number] {
+    width: 7.3rem;
+  }
+  main header div span.err {
+    font-size: 0.88em;
+  }
+  main header button.submit {
+    transform: translate(50%, 50%);
+    right: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1.1rem;
+  }
+  main section {
+    padding-top: 4rem;
+  }
+}
+@media (max-width: 576px) {
+  main {
+    padding: 2.8rem 1rem;
+  }
+  main header form {
+    justify-content: space-evenly;
+    column-gap: 1rem;
+  }
+  main header form div input[type=number] {
+    width: 5.7rem;
+    font-size: 29px;
+  }
+  main header form div span.err {
+    padding: 0.4rem 0;
+    font-size: 0.769em;
+  }
+  main section h1 {
+    font-size: 4.6rem;
+  }
+}
+@media (max-width: 443px) {
+  main {
+    padding: 2.8rem 1rem;
+  }
+  main header form {
+    justify-content: space-evenly;
+    column-gap: 0.9rem;
+  }
+  main header form div input[type=number] {
+    width: 5.4rem;
+    font-size: 26.8px;
+    padding: 0.8rem 0.3rem;
+  }
+  main header form div span.err {
+    font-size: 0.615em;
+  }
+  main header button.submit {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.9rem;
+  }
+  main section h1 {
+    font-size: 3.6rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

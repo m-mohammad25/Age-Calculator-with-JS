@@ -1,0 +1,228 @@
+@use "sass:map";
+//primary colors
+$purple: hsl(259, 100%, 65%);
+$light-red: hsl(0, 100%, 67%);
+
+//neutral
+$off-white: hsl(0, 0%, 94%);
+$light-gray: hsl(0, 0%, 86%);
+$smokey-gray: hsl(0, 1%, 44%);
+$off-black: hsl(0, 0%, 8%);
+
+$inputs-size: 32px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $light-gray;
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 42rem;
+  background-color: white;
+  padding: 3.3rem;
+  border-radius: 1rem 1rem 8rem;
+
+  header {
+    border-bottom: 1px solid $light-gray;
+    position: relative;
+    padding-bottom: 2.3rem;
+
+    form {
+      display: flex;
+      column-gap: 1.7rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: $smokey-gray;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 3px;
+        font-size: smaller;
+      }
+      input[type="number"] {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 0.4rem;
+        padding: 0.8rem 0.9rem;
+        width: 8.6rem;
+        border-radius: 0.4rem;
+        border: 1px solid $light-gray;
+        color: $off-black;
+        outline: 0;
+      }
+
+      input[type="number"]:focus {
+        border-color: $purple;
+      }
+      span.err {
+        padding: 0.4rem;
+        font-size: 0.9em;
+        color: $light-red;
+        font-style: italic;
+      }
+    }
+    button.submit {
+      background-color: $purple;
+      border: 0;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      padding: 1.3rem;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      transform: translate(0, 50%);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    button.submit:active {
+      background-color: $off-black;
+    }
+    button.submit:hover {
+      cursor: pointer;
+    }
+  }
+
+  section {
+    padding-top: 2rem;
+
+    h1 {
+      font-style: italic;
+      font-size: 5.4rem;
+      font-weight: bolder;
+      margin: 0;
+
+      span {
+        color: $purple;
+      }
+    }
+  }
+}
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  padding: 0.8rem;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    width: 40rem;
+  }
+}
+
+@media (max-width: map.get($grid-breakpoints, "md")) {
+  main {
+    width: fit-content;
+    padding: 3.3rem 1.5rem;
+
+    header {
+      padding-bottom: 4.3rem;
+      div {
+        input[type="number"] {
+          width: 7.3rem;
+        }
+        span.err {
+          font-size: 0.88em;
+        }
+      }
+
+      button.submit {
+        transform: translate(50%, 50%);
+        right: 50%;
+        width: 4.5rem;
+        height: 4.5rem;
+        padding: 1.1rem;
+      }
+    }
+
+    section {
+      padding-top: 4rem;
+    }
+  }
+}
+
+@media (max-width: map.get($grid-breakpoints, "sm")) {
+  main {
+    padding: 2.8rem 1rem;
+    header {
+      form {
+        justify-content: space-evenly;
+        column-gap: 1rem;
+
+        div {
+          input[type="number"] {
+            width: 5.7rem;
+            font-size: 29px;
+          }
+          span.err {
+            padding: 0.4rem 0;
+            font-size: 0.769em;
+          }
+        }
+      }
+    }
+    section {
+      h1 {
+        font-size: 4.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 443px) {
+  main {
+    padding: 2.8rem 1rem;
+    header {
+      form {
+        justify-content: space-evenly;
+        column-gap: 0.9rem;
+
+        div {
+          input[type="number"] {
+            width: 5.4rem;
+            font-size: 26.8px;
+            padding: 0.8rem 0.3rem;
+          }
+          span.err {
+            font-size: 0.615em;
+          }
+        }
+      }
+      button.submit {
+        width: 4rem;
+        height: 4rem;
+        padding: 0.9rem;
+      }
+    }
+    section {
+      h1 {
+        font-size: 3.6rem;
+      }
+    }
+  }
+}
