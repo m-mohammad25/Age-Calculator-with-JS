@@ -29,7 +29,7 @@ btn.onclick = () => {
     let currentMonth = now.getMonth();
     let currentDate = now.getDate();
 
-    yearAge = currentYear - dobYear;
+    let yearAge = currentYear - dobYear;
 
     if (currentMonth >= dobMonth) {
       var monthAge = currentMonth - dobMonth;

@@ -107,7 +107,8 @@ main section h1 span {
 @media (max-width: 768px) {
   main {
     width: fit-content;
-    padding: 3.3rem 1.5rem;
+    padding: 2.8rem 1.5rem;
+    margin-top: 1rem;
   }
   main header {
     padding-bottom: 4.3rem;
@@ -127,6 +128,9 @@ main section h1 span {
   }
   main section {
     padding-top: 4rem;
+  }
+  main section h1 {
+    font-size: 4.9rem;
   }
 }
 @media (max-width: 576px) {

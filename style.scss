@@ -138,7 +138,8 @@ main {
 @media (max-width: map.get($grid-breakpoints, "md")) {
   main {
     width: fit-content;
-    padding: 3.3rem 1.5rem;
+    padding: 2.8rem 1.5rem;
+    margin-top: 1rem;
 
     header {
       padding-bottom: 4.3rem;
@@ -146,6 +147,7 @@ main {
         input[type="number"] {
           width: 7.3rem;
         }
+
         span.err {
           font-size: 0.88em;
         }
@@ -162,6 +164,9 @@ main {
 
     section {
       padding-top: 4rem;
+      h1 {
+        font-size: 4.9rem;
+      }
     }
   }
 }
